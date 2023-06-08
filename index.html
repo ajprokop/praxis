@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>GPT-AXP Chat</title>
+      <link rel="stylesheet" href="css/float.css" />
+      <link rel="stylesheet" href="css/chat.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </head>
+   <body style="background-color:WhiteSmoke;">
+    
+      <a class="float" type="button" id="floatbtn"><i class="fa fa-solid fa-question my-float"></i></a>
+      <div class="container-fluid">
+         <img src="images/avaya.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
+         <div id="myModal" class="modal" tabindex="-1" role="dialog">
+            <!-- Modal content -->
+            <div class="modal-dialog" id="exampleModal" role="document">
+               <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="col-sm-8 title-chat">
+                        <figure><img src="images/phone.png" alt="" style="width: 100px;height: 75px;"/></figure>
+                     </div>
+                     <div class="col-sm-12 d-sm-flex d-block">
+                        <textarea placeholder="Name" class="form-control" id="userChat" rows="1"></textarea>
+                        <button id="connect" class="btn btn-danger p-3" onclick="startConnect()" style="margin-left: 40px;">Agent</button>            
+                     </div>
+                     <br>
+                     <div class="col-12">
+                        <div id="console-log" class="console-div" readonly=""></div>
+                     </div>
+                     <div class="col-sm-12 mt-3 mb-3">
+                        <div style="width: 100%" class="form-group mb-3">
+                           <textarea placeholder="Message" class="form-control" id="message" rows="1"></textarea>
+                        </div>
+                        <button style="padding: 0.8rem 8rem" id="sendMsg" class="btn btn-primary col-sm-12" onclick="sendMsg()" disabled>Send</button>
+                     </div>
+                     <div class="row">
+                        <div class="col-2">
+                           <br>
+                           <button id="closeModal" class="btn btn-primary" onclick="closeModal()">Close</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+        document.getElementById("floatbtn").style.visibility = "visible";
+        // Code for modal device selection dialog box
+        // Get the modal
+        var modal = document.getElementById("myModal");
+         
+         // Get the button that opens the modal
+         var btn = document.getElementById("floatbtn");
+                  
+         // Get the <span> element that closes the modal
+         var span = document.getElementsByClassName("close")[0];
+                  
+         // When the user clicks the button, open the modal 
+         btn.onclick = function() {
+             modal.style.display = "block";
+         }
+                  
+         function closeModal() {
+             modal.style.display = "none";
+         }
+      </script>
+      <script src="js/chat.js"></script>
+   </body>
+</html>

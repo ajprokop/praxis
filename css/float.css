@@ -1,0 +1,72 @@
+*{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.personInMeeting {
+    background-color: #f1f1f1;
+    border: 2px solid #eee;
+    border-radius: 0.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    font-style: italic;
+    text-align: center;
+}
+
+.dialinNumber {
+    background-color: #ccf5ff;
+    border: 2px solid #eee;
+    border-radius: 0.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    font-style: italic;
+    text-align: center;
+}
+
+.member {
+    background-color: #ccf5ff;
+    border: 2px solid #eee;
+    border-radius: 0.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    font-style: italic;
+    text-align: center;
+}
